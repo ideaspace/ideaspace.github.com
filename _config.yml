@@ -1,0 +1,13 @@
+markdown: rdiscount
+pygments: true
+exclude: ['sass']
+title : My Blog =)
+css: assets/css
+images: assets/images
+js: assets/js
+
+author :
+  name : ideaspace
+  email : for.interaction@gmail.com
+github :
+  username : ideaspace/ideaspace.github.com

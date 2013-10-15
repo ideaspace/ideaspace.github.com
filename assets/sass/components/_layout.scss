@@ -1,0 +1,18 @@
+.aside {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    bottom: 0;
+    margin-left: -250px;
+    width: 250px;
+    z-index: $zIndexAside;
+    overflow-y: auto;
+}
+
+.container {
+    margin-left: 250px;
+}
+
+.content {
+    padding: 50px;
+}
