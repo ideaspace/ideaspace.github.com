@@ -1,0 +1,22 @@
+
+.aside {
+    position: fixed;
+    top: 0;
+    left: 320px;
+    bottom: 0;
+    margin-left: -320px;
+    width: 320px;
+    z-index: $zIndexAside;
+    overflow-y: auto;
+}
+
+.container {
+    margin-left: 320px;
+}
+
+.footer {
+    border-top: 1px solid #EEE;
+    padding: 1.5em 50px;
+    background: #FAFAFA;
+    line-height: 1.6em;
+}

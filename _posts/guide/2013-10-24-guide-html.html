@@ -1,0 +1,124 @@
+---
+layout: post
+categories: guide
+title: HTML书写规范
+version: 1.0
+date: 2013-10-24
+class: page-html
+tags: css guide
+parts:
+  - name: 文档声明
+    id: doc
+  - name: 页面编码
+    id: charset
+  - name: 关键字与描述
+    id: meta
+  - name: 样式链接
+    id: link
+  - name: 脚本链接
+    id: script
+  - name: 书写要求
+    id: demand
+  - name: 标签使用
+    id: tag
+  - name: 代码注释
+    id: comment
+---
+<div id="{{ page.parts[0].id }}" class="section">
+    <h2>{{ page.parts[0].name }}</h2>
+    <p>第一行统一使用<code>HTML5</code>标准</p>
+    <pre class="prettyprint">&lt;!DOCTYPE HTML&gt;
+&lt;html>
+...
+&lt;/html>
+</pre>
+</div>
+<div id="{{ page.parts[1].id }}" class="section">
+    <h2>{{ page.parts[1].name }}</h2>
+    <p>需要根据具体需求按需选择，参考 <a href="https://github.com/hzlzh/cool-head">cool-head</a></p>
+    <pre class="prettyprint">&lt;meta charset="utf-8" /&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</pre>
+</div>
+<div id="{{ page.parts[2].id }}" class="section">
+    <h2>{{ page.parts[2].name }}</h2>
+    <p>描述不超过 70 个字符，关键词控制在 5 个以内</p>
+    <pre class="prettyprint">&lt;meta name="description" content="sentence" /&gt;
+&lt;meta name="keywords" content="words.." /&gt;</pre>
+</div>
+<div id="{{ page.parts[3].id }}" class="section">
+    <h2>{{ page.parts[3].name }}</h2>
+    <pre class="prettyprint">&lt;link rel="stylesheet" href="*.css" /&gt;</pre>
+</div>
+<div id="{{ page.parts[4].id }}" class="section">
+    <h2>{{ page.parts[4].name }}</h2>
+    <pre class="prettyprint">&lt;script type="text/javascript" src="*.js"&gt;&lt;script&gt;
+
+// 统计代码的位置在离 &lt;head/&gt; 最近的位置
+&lt;script type="text/javascript"&gt;
+    //Google Baidu
+&lt;/script&gt;
+</pre>
+</div>
+<div id="{{ page.parts[5].id }}" class="section">
+    <h2>{{ page.parts[5].name }}</h2>
+    <ol>
+        <li>所有标签必须闭合。</li>
+        <li>文档中尽量不要出现<code>&amp;nbsp;</code>,使用<code>id</code>控制缩进。</li>
+        <li>文档中尽量不使用行内样式。</li>
+        <li>为<code>&lt;img/&gt;</code>标签加上<code>alt</code>属性。</li>
+        <li>为已知宽高的<code>&lt;img/&gt;</code>标签在<code>id</code>中设置宽高属性。</li>
+        <li>为<code>&lt;label/&gt;</code>标签添加<code>for</code>属性。</li>
+        <li>确保一个<code>ID</code>只在文档中出现一次。</li>
+        <li>使用四个空格的<code>Tab</code>来缩进子节点。</li>
+        <li>当页面上有动态数字、文字时，请为其包裹上一个标签。</li>
+        <li>标签有需要应用的数据时，为其添加<code>data-*</code>前缀的属性。</li>
+        <li>使用转义符输出<code>HTML</code>特殊字符。</li>
+    </ol>
+</div>
+<div id="{{ page.parts[6].id }}" class="section">
+    <h2>{{ page.parts[6].name }}</h2>
+    <dl>
+        <dt>合理使用语义化标签</dt>
+        <dd>
+            <p>在为文档设计<code>HTML</code>标签的时候，都为每个标签附上了它的语义和用途。在标签的使用上，我们虽然没有硬性的要求，希望开发者对常用的<code>HTML</code>标签有足够的认识和理解，并合理运用。</p>
+        </dd>
+        <dt>&lt;form/&gt;标签的使用</dt>
+        <dd>
+            <p>使用异步提交数据时，避免存在无用的<code>&lt;form/&gt;</code>标签。</p>
+        </dd>
+        <dt>&lt;h1/&gt; 标签的使用</dt>
+        <dd>
+            <p>在文档中只可能出现一次<code>&lt;h1/&gt;</code>标签。</p>
+        </dd>
+        <dt>&lt;img/&gt; 标签及CSS背景的使用</dt>
+        <dd>
+            <p>何时使用<code>&lt;img/&gt;</code>标签？</p>
+            <p>页面中由后端程序获取的图片使用<code>&lt;img/&gt;</code>标签，如用户头像，用户上传图片等具有上下文意义的图片。其他情况下使用<code>id</code>背景图片。</p>
+        </dd>
+        <dt>&lt;label/&gt; 标签的使用</dt>
+        <dd>
+            <p>标签<code>&lt;label/&gt;</code>与<code>&lt;input/&gt;</code>配合使用，目的是为了用户点击文字可聚焦到输入框。</p>
+        </dd>
+        <dt>行内元素与块级元素</dt>
+        <dd>
+            <p>内联元素不允许包含块级元素，不允许空的<code>&lt;table/&gt;, &lt;ul/&gt;, &lt;ol/&gt;</code>标签，<code>&lt;p/&gt;</code>标签不允许包含任何块级元素。</p>
+        </dd>
+    </dl>
+</div>
+<div id="{{ page.parts[7].id }}" class="section">
+    <h2>{{ page.parts[7].name }}</h2>
+    <p>在结构或者模块的前后声明注释。</p>
+    <pre class="prettyprint">&lt;!-- module start --&gt;
+&lt;div class="mod mod-name"&gt;
+    ......
+&lt;/div&gt;
+&lt;!-- module end --&gt;
+
+&lt;!-- header start --&gt;
+&lt;div class="header"&gt;
+    ......
+&lt;/div&gt;
+&lt;!-- header end --&gt;</pre>
+</div>

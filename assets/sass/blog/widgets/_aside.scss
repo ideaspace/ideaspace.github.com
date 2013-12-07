@@ -1,0 +1,20 @@
+.aside {
+    background-color: $asideColor;
+    color: #fff;
+    text-align: center;
+    .user-meta {
+        padding: 1.3em 0;
+        border-bottom: 1px solid #474747;
+        img {
+            height: 100px;
+            width: 100px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+        }
+    }
+    .intro {
+        padding: 15px;
+        color: #efefef;
+        font-size: 12px;
+    }
+}

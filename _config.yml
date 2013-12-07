@@ -1,13 +1,25 @@
 markdown: rdiscount
+permalink: none
 pygments: true
 exclude: ['sass']
 title : My Blog =)
 css: assets/css
 images: assets/images
 js: assets/js
+seajs: assets/js/mod/seajs/sea.min.js
 
 author :
   name : ideaspace
   email : for.interaction@gmail.com
 github :
   username : ideaspace/ideaspace.github.com
+
+guideitems:
+  - name: HTML
+    url: guide-html.html
+  - name: CSS
+    url: guide-css.html
+  - name: SASS
+    url: guide-sass.html
+  - name: JavaScript
+    url: guide-js.html

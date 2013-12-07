@@ -1,4 +1,15 @@
-        <div class="footer">&copy; <a href="http://weibo.com/ideaspace">@ideaspace</a></div>
+        <div class="footer">Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></div>
     </div>
+    <script src="{{ site.baseurl }}{{ site.seajs }}" type="text/javascript"></script>
+    <script type="text/javascript">
+        seajs.config({
+            base: "{{ site.baseurl }}{{ site.js }}",
+            alias: {
+                "jquery"        : "mod/jquery/1.10.2/jquery",
+                "prettyprint"   : "mod/prettyprint/prettyprint"
+            }
+        })
+        seajs.use("index");
+    </script>
 </body>
 </html>

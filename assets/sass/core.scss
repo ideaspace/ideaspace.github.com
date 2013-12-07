@@ -1,9 +1,12 @@
-@import "mixin";
-@import "config";
+@import "blog/vendors/prettyprint";
 
-@import "components/normalize";
-@import "components/scaffolding";
-@import "components/layout";
-@import "components/nav";
+@import "blog/utilities/mixin";
+@import "blog/utilities/config";
 
-@import "widgets/aside";
+@import "blog/components/normalize";
+@import "blog/components/scaffolding";
+@import "blog/components/layout";
+@import "blog/components/nav";
+@import "blog/components/posts";
+
+@import "blog/widgets/aside";

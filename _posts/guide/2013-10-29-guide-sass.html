@@ -1,0 +1,174 @@
+---
+layout: post
+categories: guide
+title: SASS书写规范
+version: 1.0
+date: 2013-10-28
+class: page-sass
+tags: sass guide
+parts:
+  - name: 文件结构
+    id: directory
+  - name: 编码声明
+    id: charset
+  - name: 书写顺序
+    id: order
+  - name: 嵌套层级
+    id: nest
+  - name: 组件建设
+    id: nest
+  - name: 依赖顺序
+    id: dependancy
+  - name: 代码注释
+    id: comment
+componentsTable:
+  title:
+    - 组件名称
+    - 组件文件
+    - 组件描述
+  files:
+    - name: 三角形组件
+      file: _arrow.scss
+      desc: <code>border</code>属性渲染的纯样式三角形
+    - name: 按钮组件
+      file: _button.scss
+      desc: 使用<code>a, button</code>标签实现的按钮样式组件
+    - name: 面包屑组件
+      file: _breadcrumb.scss
+      desc: 全项目通用的面包屑导航
+    - name: 图标组件
+      file: _icon.scss
+      desc: 各种形式的的图标组件样式
+    - name: 加载组件
+      file: _loading.scss
+      desc: 可能存在的多尺寸加载样式
+    - name: 弹窗组件
+      file: _modal.scss
+      desc: 各种类型的弹出组件
+    - name: 导航组件
+      file: _nav.scss
+      desc: 站点导航组件
+    - name: 分页组件
+      file: _pagination.scss
+      desc: 站点分页组件
+    - name: 遮罩组件
+      file: _shade.scss
+      desc: 半透明遮罩层组件
+    - name: 提示组件
+      file: _tips.scss
+      desc: 鼠标经过提示组件
+---
+<div id="{{ page.parts[0].id }}" class="section">
+    <h2>{{ page.parts[0].name }}</h2>
+    <p>使用以下的目录结构来管理<code>SASS</code>文件。</p>
+    <pre class="prettyprint">SASS/
+├── components/
+│   ├── _scaffolding.scss
+│   ├── _normalize.scss
+│   ├── ...
+├── utilities/
+│   ├── _config.scss
+│   ├── _mixin.scss
+├── vendors/
+│   ├── _blankwork.scss
+│   ├── _bootstrap.scss
+│   ├── _jscrollpane.scss
+│   ├── ...
+├── overrides/
+│   ├── _bootstrap.scss
+│   ├── _jscrollpane.scss
+│   ├── ...
+├── widgets/
+│   ├── _slide.scss
+│   ├── ...
+└── style.scss                      # Primary Sass File</pre>
+    <p><code>components</code>组件目录，用于存放项目基本组件模块样式。<code>utilities</code>目录，用于存放公用工具函数和配置文件。<code>widgets</code>挂件(模块)目录，用于存放项目独立模块样式，可以独立书写，也可以导入组件。<code>vendors</code>第三方插件目录，用于存放第三方插件的样式。<code>override</code>覆盖目录，主要用于存放重新定义第三方插件样式。<code>root</code>根目录，存放最终编译输出的样式文件。</p>
+</div>
+<div id="{{ page.parts[1].id }}" class="section">
+    <h2>{{ page.parts[1].name }}</h2>
+    <p>统一在文件第一个声明字符集编码</p>
+    <pre class="prettyprint">@charset "UTF-8"</pre>
+</div>
+<div id="{{ page.parts[2].id }}" class="section">
+    <h2>{{ page.parts[2].name }}</h2>
+    <p>建议书写顺序：优先<code>@extend</code>语句，然后自身属性，再则<code>@include</code>语句，最后子选择器。</p>
+    <pre class="prettyprint">.mod {
+    @extend %example;
+    background-color: #fff;
+    @include clearfix;
+    .hd {}
+}</pre>
+</div>
+<div id="{{ page.parts[3].id }}" class="section">
+    <h2>{{ page.parts[3].name }}</h2>
+    <p>控制在<code>3</code>级嵌套以内。</p>
+    <pre class="prettyprint">.mod {
+    .hd {
+        h3 { /* 这里不再嵌套选择器 */ }
+        // 若有其他选择器，并行输出
+        a { }
+    }
+}</pre>
+</div>
+<div id="{{ page.parts[4].id }}" class="section">
+    <h2>{{ page.parts[4].name }}</h2>
+    <p>尽可能细致的划分组件。附部分组件目录:</p>
+    <table class="table table-striped">
+        <colgroup>
+            <col style="width: 25%"/>
+            <col style="width: 30%"/>
+            <col style="width: 45%"/>
+        </colgroup>
+        <tr>
+            {% assign title = page.componentsTable.title %}
+            {% for item in title %}
+                <th>{{ item }}</th>
+            {% endfor %}
+        </tr>
+        {% assign list = page.componentsTable.files %}
+        {% for item in list %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td><code>{{ item.file }}</code></td>
+            <td>{{ item.desc }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<div id="{{ page.parts[5].id }}" class="section">
+    <h2>{{ page.parts[5].name }}</h2>
+    <pre class="prettyprint">/* Vendor Dependencies */
+@import "vendors/bootstrap";
+
+/* Authored Dependencies */
+@import "utilities/mixins";
+@import "utilities/config";
+
+/* Components Dependencies */
+@import "components/scaffolding";
+@import "components/normalize";
+
+/* Widgets Dependencies */
+@import "widgets/slide";
+
+/* Override Dependencies */
+@import "override/bootstrap";
+@import "override/scaffolding";
+@import "override/slide";</pre>
+</div>
+<div id="{{ page.parts[6].id}}" class="section">
+    <h2>{{ page.parts[6].name }}</h2>
+    <pre class="prettyprint">文档注释
+/*
+@name: DropDown Menu
+@description: Style for dropdown menu.
+@require: reset.css
+@author: Jin Ye(jinye@yy.com)
+*/
+
+模块注释
+/* style for module start */
+...
+/* style for module end */</pre>
+    <p><code>@require</code> 为可选项</p>
+</div>

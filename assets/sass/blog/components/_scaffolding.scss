@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+html {
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif, tahoma;
+    background-color: $bodyBgColor;
+    color: $bodyColor;
+}
+
+a {
+    color: $linkColor;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+code {
+    margin: 0 3px;
+    padding: 2px 4px;
+    font-size: 90%;
+    white-space: nowrap;
+    background-color: $codeBgColor;
+    color: $codeColor;
+    border-radius: 4px;
+}
