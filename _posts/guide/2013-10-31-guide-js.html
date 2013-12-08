@@ -4,7 +4,8 @@ categories: guide
 title: JavaScript书写规范
 version: 1.0
 date: 2013-10-31
-class: page-js
+class: page
+tags: javascript guide
 parts:
   - name: 目录结构
     id: sturcture
@@ -56,4 +57,33 @@ parts:
 * @param {Function} module.
 */
 define(id?, deps?, factory)</pre>
+    <pre class="prettyprint">window.Vault = (function (window, document, undefined) {
+
+  'use strict';
+
+  var getStore = function (type) {
+    return type === 'local' ? localStorage : sessionStorage;
+  };
+
+  return {
+    set: function (type, key, value) {
+      if (!key || !value) return;
+      getStore(type).setItem(key, JSON.stringify(value));
+    },
+    get: function (type, key) {
+      var value = getStore(type).getItem(key);
+      if (!value) return;
+      return JSON.parse(value);
+    },
+    remove: function (type, key) {
+      if (!getStore(type).getItem(key)) return;
+      getStore(type).removeItem(key);
+    },
+    empty: function (type) {
+      getStore(type).clear();
+    }
+  };
+
+})(window, document);
+    </pre>
 </div>

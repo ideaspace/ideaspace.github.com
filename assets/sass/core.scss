@@ -1,4 +1,19 @@
-@import "blog/vendors/prettyprint";
+// prettyprint code syntax
+@import "blog/vendors/codesyntax/prettyprint";
+
+// fontawesome
+@import "blog/vendors/fontawesome/variables";
+@import "blog/vendors/fontawesome/mixins";
+@import "blog/vendors/fontawesome/path";
+@import "blog/vendors/fontawesome/core";
+@import "blog/vendors/fontawesome/larger";
+@import "blog/vendors/fontawesome/fixed-width";
+@import "blog/vendors/fontawesome/list";
+@import "blog/vendors/fontawesome/bordered-pulled";
+@import "blog/vendors/fontawesome/spinning";
+@import "blog/vendors/fontawesome/rotated-flipped";
+@import "blog/vendors/fontawesome/stacked";
+@import "blog/vendors/fontawesome/icons";
 
 @import "blog/utilities/mixin";
 @import "blog/utilities/config";
@@ -10,3 +25,5 @@
 @import "blog/components/posts";
 
 @import "blog/widgets/aside";
+
+@import "blog/extend/fontawesome";

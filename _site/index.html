@@ -5,7 +5,7 @@
     <title>关注WEB开发</title>
     <link rel="stylesheet" href="/assets/css/core.css"/>
 </head>
-<body class="page-home">
+<body class="home">
     <div class="wrap">
 <div class="aside">
     <div class="user-meta">
@@ -13,37 +13,50 @@
             <img src="/assets/images/avatar.jpg" alt="My Lovely Daughter"/>
         </a>
         <div class="intro">
-            <p>A FrontEnd Developer In YY.INC. <br/>Focus on Sass, jQuery, Seajs, Angularjs, Laravel4.</p>
+            <p>A FrontEnd Developer In YY.INC. <br/>Focus on FrontEnd Workflow with Gruntjs, Sass, jQuery, Seajs, Angularjs, Laravel4.</p>
         </div>
     </div>
     <ul class="nav nav-list">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
+        
+        <li>
+            
+            <a class="active"
+            
+              href="/">Home</a></li>
+        
+        <li>
+            
+            <a
+            
+              href="/about/">About</a></li>
+        
     </ul>
 </div>
 <div class="container">
     <div class="content">
+        
         <div class="posts">
+        
             <ul class="post-list">
     
     <li>
         <h2><a href="/guide/guide-js.html">JavaScript书写规范</a></h2>
-        <p class="post-meta"><small>31 Oct 2013</small></p>
+        <p class="post-meta"><small>Oct 31, 2013</small></p>
     </li>
     
     <li>
         <h2><a href="/guide/guide-sass.html">SASS书写规范</a></h2>
-        <p class="post-meta"><small>28 Oct 2013</small></p>
+        <p class="post-meta"><small>Oct 28, 2013</small></p>
     </li>
     
     <li>
         <h2><a href="/guide/guide-css.html">CSS书写规范</a></h2>
-        <p class="post-meta"><small>25 Oct 2013</small></p>
+        <p class="post-meta"><small>Oct 25, 2013</small></p>
     </li>
     
     <li>
         <h2><a href="/guide/guide-html.html">HTML书写规范</a></h2>
-        <p class="post-meta"><small>24 Oct 2013</small></p>
+        <p class="post-meta"><small>Oct 24, 2013</small></p>
     </li>
     　
 </ul>
@@ -56,8 +69,8 @@
         seajs.config({
             base: "/assets/js",
             alias: {
-                "jquery"        : "mod/jquery/1.10.2/jquery",
-                "prettyprint"   : "mod/prettyprint/prettyprint"
+                "jquery"        : "mod/jquery/1.10.2/jquery.js",
+                "prettyprint"   : "mod/prettyprint/prettyprint.js"
             }
         })
         seajs.use("index");

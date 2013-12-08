@@ -2,24 +2,19 @@ markdown: rdiscount
 permalink: none
 pygments: true
 exclude: ['sass']
-title : My Blog =)
+title: 关注Web前端
+
 css: assets/css
 images: assets/images
 js: assets/js
 seajs: assets/js/mod/seajs/sea.min.js
+jquery: mod/jquery/1.10.2/jquery.js
+prettyprint: mod/prettyprint/prettyprint.js
 
-author :
-  name : ideaspace
-  email : for.interaction@gmail.com
-github :
-  username : ideaspace/ideaspace.github.com
-
-guideitems:
-  - name: HTML
-    url: guide-html.html
-  - name: CSS
-    url: guide-css.html
-  - name: SASS
-    url: guide-sass.html
-  - name: JavaScript
-    url: guide-js.html
+nav:
+  - name: Home
+    url:  /index.html
+    segment:
+  - name: About
+    url: /about/index.html
+    segment: about/

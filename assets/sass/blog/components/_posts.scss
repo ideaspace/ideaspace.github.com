@@ -25,24 +25,32 @@
     }
     .post-meta {
         @include inline-block;
-        margin-top: 0;
-        padding: 4px 15px;
-        background-color: #f5f5f5;
-        color: #716B7A;;
+        margin: 15px 0;
         font-size: 80%;
+    }
+    time {
+        padding: 4px 15px;
+        background-color: #F3F3F3;
+        color: #616161;
+        .fa {
+            margin-right: 6px;
+        }
     }
     .tags {
         margin-left: 10px;
         text-transform: uppercase;
         a {
             margin: 0 1px;
-            padding: 1px 5px;
+            padding: 4px 8px;
+            background-color: #EAF3FD;
+            color: #6491C9;
             &:hover {
                 text-decoration: none;
             }
         }
     }
     h2 {
+        margin: 15px 0;
         padding: 0 0 15px;
         border-bottom: 1px solid #EEE;
     }

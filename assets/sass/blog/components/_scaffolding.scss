@@ -26,6 +26,14 @@ body {
     color: $bodyColor;
 }
 
+table {
+    width: 100%;
+}
+
+ol {
+    margin-left: 28px;
+}
+
 a {
     color: $linkColor;
     text-decoration: none;

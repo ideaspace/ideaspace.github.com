@@ -5,8 +5,8 @@
         seajs.config({
             base: "{{ site.baseurl }}{{ site.js }}",
             alias: {
-                "jquery"        : "mod/jquery/1.10.2/jquery",
-                "prettyprint"   : "mod/prettyprint/prettyprint"
+                "jquery"        : "{{ site.jquery }}",
+                "prettyprint"   : "{{ site.prettyprint }}"
             }
         })
         seajs.use("index");

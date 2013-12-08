@@ -4,11 +4,18 @@
             <img src="{{ site.baseurl }}{{ site.images }}/avatar.jpg" alt="My Lovely Daughter"/>
         </a>
         <div class="intro">
-            <p>A FrontEnd Developer In YY.INC. <br/>Focus on Sass, jQuery, Seajs, Angularjs, Laravel4.</p>
+            <p>A FrontEnd Developer In YY.INC. <br/>Focus on FrontEnd Workflow with Gruntjs, Sass, jQuery, Seajs, Angularjs, Laravel4.</p>
         </div>
     </div>
     <ul class="nav nav-list">
-        <li><a href="{{ site.baseurl }}">Home</a></li>
-        <li><a href="{{ site.baseurl }}about/">About</a></li>
+        {% for item in site.nav %}
+        <li>
+            {% if page.url == item.url %}
+            <a class="active"
+            {% else %}
+            <a
+            {% endif %}
+              href="{{ site.baseurl }}{{ item.segment }}">{{ item.name }}</a></li>
+        {% endfor %}
     </ul>
 </div>

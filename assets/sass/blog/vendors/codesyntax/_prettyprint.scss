@@ -62,3 +62,13 @@
 .prettyprint code {
     font-family: Monaco, Consolas, "Lucida Console", monospace
 }
+
+.prettyprint.linenums {
+    box-shadow: inset 40px -1px 0 #515151;
+    .linenums {
+        margin-left: 25px;
+        li {
+            padding-left: 10px;
+        }
+    }
+}
