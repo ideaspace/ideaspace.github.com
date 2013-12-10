@@ -1,14 +1,14 @@
 <div class="aside">
     <div class="user-meta">
         <a href="{{ site.baseurl }}" title="My Lovely Daughter">
-            <img src="{{ site.baseurl }}{{ site.images }}/avatar.jpg" alt="My Lovely Daughter"/>
+            <img src="{{ site.baseurl }}{{ site.data.path.images }}/avatar.jpg" alt="My Lovely Daughter"/>
         </a>
         <div class="intro">
             <p>A FrontEnd Developer In YY.INC. <br/>Focus on FrontEnd Workflow with Gruntjs, Sass, jQuery, Seajs, Angularjs, Laravel4.</p>
         </div>
     </div>
     <ul class="nav nav-list">
-        {% for item in site.nav %}
+        {% for item in site.data.nav %}
         <li>
             {% if page.url == item.url %}
             <a class="active"

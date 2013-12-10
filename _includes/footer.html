@@ -1,12 +1,11 @@
         <div class="footer">Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></div>
     </div>
-    <script src="{{ site.baseurl }}{{ site.seajs }}" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}{{ site.data.path.seajs }}" type="text/javascript"></script>
     <script type="text/javascript">
         seajs.config({
-            base: "{{ site.baseurl }}{{ site.js }}",
+            base: "{{ site.baseurl }}{{ site.data.path.js }}",
             alias: {
-                "jquery"        : "{{ site.jquery }}",
-                "prettyprint"   : "{{ site.prettyprint }}"
+                "jquery"        : "{{ site.data.path.jquery }}"
             }
         })
         seajs.use("index");

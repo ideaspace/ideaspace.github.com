@@ -19,7 +19,8 @@ parts:
 <div id="{{ page.parts[0].id }}" class="section">
     <h2>{{ page.parts[0].name }}</h2>
     <p>使用 <a href="http://seajs.org" target="_blank">Seajs</a> 实现脚本的模块化加载。</p>
-    <pre class="prettyprint">JS/
+    <div class="highlight">
+        <pre><code>JS/
 ├── apps/
 │   ├── requset.js
 │   ├── carousel.js
@@ -38,7 +39,8 @@ parts:
 │   ├── seajs/
 │   │   ├── sea.js
 │   │   ├── sea.min.map
-└── index.js                      # 单一入口文件</pre>
+└── index.js                      # 单一入口文件</code></pre>
+    </div>
 </div>
 <div id="{{ page.parts[1].id }}" class="section">
     <h2>{{ page.parts[1].name }}</h2>
@@ -51,39 +53,10 @@ parts:
 <div id="{{ page.parts[3].id }}" class="section">
     <h2>{{ page.parts[3].name }}</h2>
     <p><code>seajs</code>遵循 <a href="https://github.com/cmdjs/specification/blob/master/draft/module.md" target="_blank">CMD</a> 规范，在<code>CMD</code>规范中，一个模块就是一个文件。代码的书写格式如下:</p>
-    <pre class="prettyprint">/**
+    {% highlight js linenos %}/**
 * @param {String} module id.
 * @param {Array} module dependencies.
 * @param {Function} module.
 */
-define(id?, deps?, factory)</pre>
-    <pre class="prettyprint">window.Vault = (function (window, document, undefined) {
-
-  'use strict';
-
-  var getStore = function (type) {
-    return type === 'local' ? localStorage : sessionStorage;
-  };
-
-  return {
-    set: function (type, key, value) {
-      if (!key || !value) return;
-      getStore(type).setItem(key, JSON.stringify(value));
-    },
-    get: function (type, key) {
-      var value = getStore(type).getItem(key);
-      if (!value) return;
-      return JSON.parse(value);
-    },
-    remove: function (type, key) {
-      if (!getStore(type).getItem(key)) return;
-      getStore(type).removeItem(key);
-    },
-    empty: function (type) {
-      getStore(type).clear();
-    }
-  };
-
-})(window, document);
-    </pre>
+define(id?, deps?, factory){% endhighlight %}
 </div>

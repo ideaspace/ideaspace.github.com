@@ -61,7 +61,8 @@ componentsTable:
 <div id="{{ page.parts[0].id }}" class="section">
     <h2>{{ page.parts[0].name }}</h2>
     <p>使用以下的目录结构来管理<code>SASS</code>文件。</p>
-    <pre class="prettyprint">SASS/
+    <div class="highlight">
+    <pre><code>SASS/
 ├── components/
 │   ├── _scaffolding.scss
 │   ├── _normalize.scss
@@ -81,34 +82,40 @@ componentsTable:
 ├── widgets/
 │   ├── _slide.scss
 │   ├── ...
-└── style.scss                      # Primary Sass File</pre>
+└── style.scss                      # Primary Sass File</code></pre></div>
     <p><code>components</code>组件目录，用于存放项目基本组件模块样式。<code>utilities</code>目录，用于存放公用工具函数和配置文件。<code>widgets</code>挂件(模块)目录，用于存放项目独立模块样式，可以独立书写，也可以导入组件。<code>vendors</code>第三方插件目录，用于存放第三方插件的样式。<code>override</code>覆盖目录，主要用于存放重新定义第三方插件样式。<code>root</code>根目录，存放最终编译输出的样式文件。</p>
 </div>
 <div id="{{ page.parts[1].id }}" class="section">
     <h2>{{ page.parts[1].name }}</h2>
     <p>统一在文件第一个声明字符集编码</p>
-    <pre class="prettyprint">@charset "UTF-8"</pre>
+    {% highlight scss %}
+@charset "UTF-8"
+{% endhighlight%}
 </div>
 <div id="{{ page.parts[2].id }}" class="section">
     <h2>{{ page.parts[2].name }}</h2>
     <p>建议书写顺序：优先<code>@extend</code>语句，然后自身属性，再则<code>@include</code>语句，最后子选择器。</p>
-    <pre class="prettyprint">.mod {
+    {% highlight scss %}
+.mod {
     @extend %example;
     background-color: #fff;
     @include clearfix;
     .hd {}
-}</pre>
+}
+{% endhighlight%}
 </div>
 <div id="{{ page.parts[3].id }}" class="section">
     <h2>{{ page.parts[3].name }}</h2>
     <p>控制在<code>3</code>级嵌套以内。</p>
-    <pre class="prettyprint">.mod {
+    {% highlight scss %}
+ .mod {
     .hd {
         h3 { /* 这里不再嵌套选择器 */ }
         // 若有其他选择器，并行输出
         a { }
     }
-}</pre>
+ }
+ {% endhighlight%}
 </div>
 <div id="{{ page.parts[4].id }}" class="section">
     <h2>{{ page.parts[4].name }}</h2>
@@ -137,7 +144,8 @@ componentsTable:
 </div>
 <div id="{{ page.parts[5].id }}" class="section">
     <h2>{{ page.parts[5].name }}</h2>
-    <pre class="prettyprint">/* Vendor Dependencies */
+    {% highlight css %}
+ /* Vendor Dependencies */
 @import "vendors/bootstrap";
 
 /* Authored Dependencies */
@@ -154,11 +162,13 @@ componentsTable:
 /* Override Dependencies */
 @import "override/bootstrap";
 @import "override/scaffolding";
-@import "override/slide";</pre>
+@import "override/slide";
+{% endhighlight %}
 </div>
 <div id="{{ page.parts[6].id}}" class="section">
     <h2>{{ page.parts[6].name }}</h2>
-    <pre class="prettyprint">文档注释
+    <p>在文档的顶部和模块开始结束的地方声明注释。</p>
+    {% highlight css %}
 /*
 @name: DropDown Menu
 @description: Style for dropdown menu.
@@ -166,9 +176,9 @@ componentsTable:
 @author: Jin Ye(jinye@yy.com)
 */
 
-模块注释
 /* style for module start */
 ...
-/* style for module end */</pre>
+/* style for module end */
+{% endhighlight %}
     <p><code>@require</code> 为可选项</p>
 </div>

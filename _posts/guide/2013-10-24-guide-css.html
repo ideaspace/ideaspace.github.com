@@ -94,17 +94,21 @@ selectorTable:
     <p>属性需要写在一行。在<code>{</code>和<code>}</code>前后追加空格。</p>
     <pre class="prettyprint">.selector { property: value; }</pre>
     <p>多于2个的选择器使用同样的属性时，每个各占一行。</p>
-    <pre class="prettyprint">.selector1,
+    {% highlight css %}
+.selector1,
 .selector2,
 .selector3,
 ...
-.selectorN { property: value; }</pre>
+.selectorN { property: value; }
+{% endhighlight %}
     <p>避免使用低效的选择器</p>
-    <pre class="prettyprint">body &gt; * {...}
+    {% highlight css %}
+body > * {...}
 div#ID {...}
-div#ID &gt; h3 {...}
+div#ID > h3 {...}
 #ID span.class a {...}
-div:last-child {...}</pre>
+div:last-child {...}
+{% endhighlight %}
 </div>
 <div id="{{ page.parts[1].id }}" class="section">
     <h2>{{ page.parts[1].name }}</h2>
@@ -143,10 +147,12 @@ div:last-child {...}</pre>
 <div id="{{ page.parts[2].id }}" class="section">
     <h2>{{ page.parts[2].name }}</h2>
     <p>标准通过触发元素的 <a target="_blank" href="http://www.yuiblog.com/blog/2010/05/19/id-101-block-formatting-contexts/">BFC</a> 达到清除浮动的目的。<code>lte7</code>通过<code>zoom</code>属性来模拟。</p>
-<pre class="prettyprint">.clearfix { *zoom: 1; }
+    {% highlight css %}
+.clearfix { *zoom: 1; }
 .clearfix:before,
 .clearfix:after { display: table; content: ""; }
-.clearfix:after { clear: both; }</pre>
+.clearfix:after { clear: both; }
+{% endhighlight %}
 </div>
 <div id="{{ page.parts[3].id }}" class="section">
     <h2>{{ page.parts[3].name }}</h2>
@@ -209,7 +215,9 @@ div:last-child {...}</pre>
         </tr>
     </table>
     <p>我们可以使用<code>escape</code>方法获取中文字体的 Unicode 编码。</p>
-    <pre class="prettyprint">escape('宋体').replace(/%u/g,'\\')</pre>
+    {% highlight css %}
+escape('宋体').replace(/%u/g,'\\')
+{% endhighlight %}
 </div>
 <div id="{{ page.parts[5].id }}" class="section">
     <h2>{{ page.parts[5].name }}</h2>
@@ -255,17 +263,20 @@ div:last-child {...}</pre>
 </div>
 <div id="{{ page.parts[6].id}}" class="section">
     <h2>{{ page.parts[6].name }}</h2>
-    <pre class="prettyprint">文档注释
+    <p>文档注释</p>
+    {% highlight css %}
 /*
 @name: DropDown Menu
 @description: Style for dropdown menu.
 @require: reset.css
 @author: Jin Ye(jinye@yy.com)
 */
-
-模块注释
+{% endhighlight %}
+    <p>模块注释</p>
+    {% highlight css %}
 /* style for module start */
 ...
-/* style for module end */</pre>
+/* style for module end */
+{% endhighlight %}
     <p><code>@require</code> 为可选项</p>
 </div>

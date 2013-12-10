@@ -1,0 +1,6 @@
+- name: Home
+  url:  /index.html
+  segment:
+- name: About
+  url: /about/index.html
+  segment: about/

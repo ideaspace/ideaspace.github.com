@@ -3,18 +3,6 @@ permalink: none
 pygments: true
 exclude: ['sass']
 title: 关注Web前端
+excerpt_separator: ""
 
-css: assets/css
-images: assets/images
-js: assets/js
-seajs: assets/js/mod/seajs/sea.min.js
-jquery: mod/jquery/1.10.2/jquery.js
-prettyprint: mod/prettyprint/prettyprint.js
 
-nav:
-  - name: Home
-    url:  /index.html
-    segment:
-  - name: About
-    url: /about/index.html
-    segment: about/

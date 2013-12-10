@@ -27,38 +27,40 @@ parts:
 <div id="{{ page.parts[0].id }}" class="section">
     <h2>{{ page.parts[0].name }}</h2>
     <p>第一行统一使用<code>HTML5</code>标准</p>
-    <pre class="prettyprint">&lt;!DOCTYPE HTML&gt;
-&lt;html>
+    {% highlight html %}
+<!DOCTYPE HTML>
+<html>
 ...
-&lt;/html>
-</pre>
+</html>
+{% endhighlight %}
 </div>
 <div id="{{ page.parts[1].id }}" class="section">
     <h2>{{ page.parts[1].name }}</h2>
     <p>需要根据具体需求按需选择，参考 <a href="https://github.com/hzlzh/cool-head">cool-head</a></p>
-    <pre class="prettyprint">&lt;meta charset="utf-8" /&gt;
-&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-</pre>
+    {% highlight html %}<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endhighlight %}
 </div>
 <div id="{{ page.parts[2].id }}" class="section">
     <h2>{{ page.parts[2].name }}</h2>
     <p>描述不超过 70 个字符，关键词控制在 5 个以内</p>
-    <pre class="prettyprint">&lt;meta name="description" content="sentence" /&gt;
-&lt;meta name="keywords" content="words.." /&gt;</pre>
+    {% highlight html %}<meta name="description" content="sentence" />
+<meta name="keywords" content="words.." />{% endhighlight %}
 </div>
 <div id="{{ page.parts[3].id }}" class="section">
     <h2>{{ page.parts[3].name }}</h2>
-    <pre class="prettyprint">&lt;link rel="stylesheet" href="*.css" /&gt;</pre>
+    {% highlight html %}<link rel="stylesheet" href="*.css" /> {% endhighlight %}
 </div>
 <div id="{{ page.parts[4].id }}" class="section">
     <h2>{{ page.parts[4].name }}</h2>
-    <pre class="prettyprint">&lt;script type="text/javascript" src="*.js"&gt;&lt;script&gt;
-
-// 统计代码的位置在离 &lt;head/&gt; 最近的位置
-&lt;script type="text/javascript"&gt;
-    //Google Baidu
-&lt;/script&gt;</pre>
+    {% highlight html %}
+<script type="text/javascript" src="*.js"></script>
+<script type="text/javascript">
+    // 统计代码放在里 <head/> 标签最近的地方
+    // Google analytics, Baidu tongji
+</script>
+{% endhighlight %}
 </div>
 <div id="{{ page.parts[5].id }}" class="section">
     <h2>{{ page.parts[5].name }}</h2>
@@ -109,15 +111,15 @@ parts:
 <div id="{{ page.parts[7].id }}" class="section">
     <h2>{{ page.parts[7].name }}</h2>
     <p>在结构或者模块的前后声明注释。</p>
-    <pre class="prettyprint">&lt;!-- module start --&gt;
-&lt;div class="mod mod-name"&gt;
+    {% highlight html %}<!-- module start -->
+<div class="mod mod-name">
     ......
-&lt;/div&gt;
-&lt;!-- module end --&gt;
+</div>
+<!-- module end -->
 
-&lt;!-- header start --&gt;
-&lt;div class="header"&gt;
+<!-- header start -->
+<div class="header">
     ......
-&lt;/div&gt;
-&lt;!-- header end --&gt;</pre>
+</div>
+<!-- header end -->{% endhighlight %}
 </div>
