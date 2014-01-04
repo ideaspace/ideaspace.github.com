@@ -5,7 +5,7 @@ title: JavaScript书写规范
 version: 1.0
 date: 2013-10-31
 class: page
-tags: javascript guide
+tags: Js Guide
 parts:
   - name: 目录结构
     id: sturcture
@@ -19,7 +19,6 @@ parts:
 <div id="{{ page.parts[0].id }}" class="section">
     <h2>{{ page.parts[0].name }}</h2>
     <p>使用 <a href="http://seajs.org" target="_blank">Seajs</a> 实现脚本的模块化加载。</p>
-    <div class="highlight">
         <pre><code>JS/
 ├── apps/
 │   ├── requset.js
@@ -40,23 +39,26 @@ parts:
 │   │   ├── sea.js
 │   │   ├── sea.min.map
 └── index.js                      # 单一入口文件</code></pre>
-    </div>
 </div>
-<div id="{{ page.parts[1].id }}" class="section">
-    <h2>{{ page.parts[1].name }}</h2>
-    <p>使用<code>jQuery 1.9.1</code>版本。 使用<code>Seajs</code>最新版本。</p>
-</div>
-<div id="{{ page.parts[2].id }}" class="section">
-    <h2>{{ page.parts[2].name }}</h2>
-    <p>使用 <a href="https://github.com/aui/arttemplate/" target="_blank">artTemplate</a> 作为前端模板渲染引擎。</p>
-</div>
-<div id="{{ page.parts[3].id }}" class="section">
-    <h2>{{ page.parts[3].name }}</h2>
-    <p><code>seajs</code>遵循 <a href="https://github.com/cmdjs/specification/blob/master/draft/module.md" target="_blank">CMD</a> 规范，在<code>CMD</code>规范中，一个模块就是一个文件。代码的书写格式如下:</p>
-    {% highlight js linenos %}/**
+
+## {{ page.parts[1].name }}
+
+使用<code>jQuery 1.9.1</code>版本。 使用<code>Seajs</code>最新版本。
+
+
+## {{ page.parts[2].name }}
+
+<a href="https://github.com/aui/arttemplate/" target="_blank">artTemplate</a> 作为前端模板渲染引擎。
+
+## {{ page.parts[3].name }}
+
+<p><code>seajs</code>遵循 <a href="https://github.com/cmdjs/specification/blob/master/draft/module.md" target="_blank">CMD</a> 规范，在<code>CMD</code>规范中，一个模块就是一个文件。代码的书写格式如下:</p>
+
+```javascript
+/**
 * @param {String} module id.
 * @param {Array} module dependencies.
 * @param {Function} module.
 */
-define(id?, deps?, factory){% endhighlight %}
-</div>
+define(id?, deps?, factory)
+```
