@@ -142,6 +142,6 @@ tags: jQuery Deferred Promise
 #### 参考
 
 *   [JavaScript Promises](http://www.html5rocks.com/en/tutorials/es6/promises/ "JavaScript Promises")
-*   [Promise & Deferred Objects in JavaScript Pt.1: Theory and Semantics.](http://blog.mediumequalsmessage.com/promise-deferred-objects-in-javascript-pt1-theory-and-semantics,"Promise & Deferred Objects")
-*   [Promise & Deferred Objects in JavaScript Pt.2: in Practice](http://blog.mediumequalsmessage.com/promise-deferred-objects-in-javascript-pt2-practical-use,"Promise & Deferred Objects")
+*   [Promise & Deferred Objects in JavaScript Pt.1: Theory and Semantics.](http://blog.mediumequalsmessage.com/promise-deferred-objects-in-javascript-pt1-theory-and-semantics "Promise & Deferred Objects")
+*   [Promise & Deferred Objects in JavaScript Pt.2: in Practice](http://blog.mediumequalsmessage.com/promise-deferred-objects-in-javascript-pt2-practical-use "Promise & Deferred Objects")
 
