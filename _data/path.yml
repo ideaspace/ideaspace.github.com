@@ -2,4 +2,6 @@ css: assets/css
 images: assets/images
 js: assets/js
 seajs: assets/js/mod/seajs/sea.min.js
-jquery: mod/jquery/1.10.2/jquery.js
+jquery: mod/jquery/1.9.1/jquery.js
+prettify: mod/prettify/prettify.js
+highlight: mod/prettify/highlight.pack.js

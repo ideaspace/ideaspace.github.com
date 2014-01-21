@@ -1,7 +1,14 @@
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+layouts:     ./_layouts
+encoding: UTF-8
 markdown: rdiscount
-permalink: none
+rdiscount:
+  extensions: ["autolink", "smart"]
+permalink: /:categories/:title
 pygments: true
-exclude: ['sass']
+exclude: ['sass','node_modules','Gruntfile.js','package.json']
 title: 关注Web前端
 excerpt_separator: ""
 

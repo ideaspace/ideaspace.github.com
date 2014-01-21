@@ -42,12 +42,25 @@ a {
     }
 }
 
+
 code {
     margin: 0 3px;
-    padding: 2px 4px;
+    padding: 2px 5px;
     font-size: 90%;
     white-space: nowrap;
     background-color: $codeBgColor;
     color: $codeColor;
-    border-radius: 4px;
+    border-radius: 2px;
+    font-family: consolas, monospace;
+}
+
+strong {
+    margin: 0 3px;
+}
+
+.essay {
+    ul {
+        list-style: disc;
+        margin-left: 20px;
+    }
 }

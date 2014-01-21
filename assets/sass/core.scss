@@ -15,8 +15,8 @@
 @import "blog/vendors/fontawesome/stacked";
 @import "blog/vendors/fontawesome/icons";
 
-@import "blog/utilities/mixin";
-@import "blog/utilities/config";
+@import "blog/extend/mixin";
+@import "blog/extend/config";
 
 @import "blog/components/normalize";
 @import "blog/components/scaffolding";
@@ -27,4 +27,3 @@
 
 @import "blog/widgets/aside";
 
-@import "blog/extend/fontawesome";

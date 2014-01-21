@@ -4,7 +4,7 @@
  * Generated via Google, these are snippets of HTML, CSS, and JS.
  */
 
-.prettyprint {
+.sytnax {
     font-family: Monaco, Consolas, "Lucida Console", monospace;
     background-color: #444;
     padding: 1.5em;
@@ -17,59 +17,56 @@
     background-clip: padding-box
 }
 
-.prettyprint .pln {
+.sytnax .pln {
     color: #e9e4e5
 }
 
-.prettyprint .str {
+.sytnax .str {
     color: #bcd42a
 }
 
-.prettyprint .kwd {
+.sytnax .kwd {
     color: #4bb1b1
 }
 
-.prettyprint .com {
+.sytnax .com {
     color: #888
 }
 
-.prettyprint .typ {
+.sytnax .typ {
     color: #ef7c61
 }
 
-.prettyprint .lit {
+.sytnax .lit {
     color: #bcd42a
 }
 
-.prettyprint .pun, .prettyprint .opn, .prettyprint .clo {
+.sytnax .pun, .sytnax .opn, .sytnax .clo {
     color: #fff
 }
 
-.prettyprint .tag {
+.sytnax .tag {
     color: #4bb1b1
 }
 
-.prettyprint .atn {
+.sytnax .atn {
     color: #ef7c61
 }
 
-.prettyprint .atv {
+.sytnax .atv {
     color: #bcd42a
 }
 
-.prettyprint .dec, .prettyprint .var {
+.sytnax .dec, .sytnax .var {
     color: #E9E9BE
 }
 
-.prettyprint .fun {
+.sytnax .fun {
     color: #f00
 }
 
-.prettyprint code {
-    font-family: Monaco, Consolas, "Lucida Console", monospace
-}
 
-.prettyprint.linenums {
+.sytnax.linenums {
     box-shadow: inset 40px -1px 0 #515151;
     .linenums {
         margin-left: 25px;
@@ -79,104 +76,192 @@
     }
 }
 
-/*
- * Code snippets
- *
- * Generated via Pygments and Jekyll, these are snippets of HTML, CSS, and JS.
- */
 
-.highlight {
-    padding: 15px;
-    margin: 15px 0;
+/* Start syntax highlighting styles */
+/* Pretty printing styles. Used with prettify.js. */
+/* Vim sunburst theme by David Leibovic */
+
+.sytnax code {
+    background-color: transparent;
+    font-family: Monaco, Consolas, "Lucida Console", monospace
+}
+
+.sytnax .str, code .str { color: #BCD42A; } /* string  - green */
+.sytnax .kwd, code .kwd { color: #E28964; } /* keyword - dark pink */
+.sytnax .com, code .com { color: #AEAEAE; font-style: italic; } /* comment - gray */
+.sytnax .typ, code .typ { color: #89bdff; } /* type - light blue */
+.sytnax .lit, code .lit { color: #bcd42a; } /* literal - blue */
+.sytnax .pun, code .pun { color: #fff; } /* punctuation - white */
+.sytnax .pln, code .pln { color: #fff; } /* plaintext - white */
+.sytnax .tag, code .tag { color: #89bdff; } /* html/xml tag    - light blue */
+.sytnax .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
+.sytnax .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
+.sytnax .dec, code .dec { color: #3387CC; } /* decimal - blue */
+
+pre.sytnax {
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
     background-color: #444;
-    pre {
-        line-height: 1.2;
-    }
+    padding: 1.5em;
+    font-size: .75em;
+    border: 0;
+    color: #e9e4e5;
+    line-height: 1.5em;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     code {
-        margin: 0;
         padding: 0;
-        font-size: inherit;
+        margin: 0;
         white-space: pre-wrap;
-        background-color: transparent;
-        color: #fff; /* Effectively the base text color */
-        font-family: consolas, monospace;
-    }
-    .lineno {
-        display: inline-block;
-        width: 20px;
-        padding-right: 5px;
-        margin-right: 10px;
-        text-align: right;
-        color: #bebec5;
     }
 }
 
-.hll { background-color: #404040 }
-.c { color: #999999; } /* Comment */
-.err { color: #a61717; background-color: #e3d2d2 } /* Error */
-.g { color: #d0d0d0 } /* Generic */
-.k { color: #E28964;  } /* Keyword */
-.l { color: #d0d0d0 } /* Literal */
-.n { color: #E28964 } /* Name */
-.o { color: #ffffff } /* Operator */
-.x { color: #d0d0d0 } /* Other */
-.p { color: #f0f0f0 } /* Punctuation */
-.cm { color: #999999; } /* Comment.Multiline */
-.cp { color: #E9E9BE;  } /* Comment.Preproc */
-.c1 { color: #999999; } /* Comment.Single */
-.cs { color: #e50808; ; background-color: #520000 } /* Comment.Special */
-.gd { color: #d22323 } /* Generic.Deleted */
-.ge { color: #d0d0d0; font-style: italic } /* Generic.Emph */
-.gr { color: #d22323 } /* Generic.Error */
-.gh { color: #ffffff;  } /* Generic.Heading */
-.gi { color: #589819 } /* Generic.Inserted */
-.go { color: #cccccc } /* Generic.Output */
-.gp { color: #aaaaaa } /* Generic.Prompt */
-.gs { color: #d0d0d0;  } /* Generic.Strong */
-.gu { color: #ffffff; text-decoration: underline } /* Generic.Subheading */
-.gt { color: #d22323 } /* Generic.Traceback */
-.kc { color: #6ab825;  } /* Keyword.Constant */
-.kd { color: #E28964;  } /* Keyword.Declaration */
-.kn { color: #6ab825;  } /* Keyword.Namespace */
-.kp { color: #6ab825 } /* Keyword.Pseudo */
-.kr { color: #6ab825;  } /* Keyword.Reserved */
-.kt { color: #6ab825;  } /* Keyword.Type */
-.ld { color: #d0d0d0 } /* Literal.Date */
-.m { color: #3677a9 } /* Literal.Number */
-.s { color: #BCD42A } /* Literal.String */
-.na { color: #EF7C61 } /* Name.Attribute */
-.nb { color: #24909d } /* Name.Builtin */
-.nc { color: #ffffff } /* Name.Class */
-.no { color: #40ffff } /* Name.Constant */
-.nd { color: #ffa500 } /* Name.Decorator */
-.ni { color: #d0d0d0 } /* Name.Entity */
-.ne { color: #bbbbbb } /* Name.Exception */
-.nf { color: #E8F1A0 } /* Name.Function */
-.nl { color: #d0d0d0 } /* Name.Label */
-.nn { color: #447fcf; } /* Name.Namespace */
-.nx { color: #f0f0f0 } /* Name.Other */
-.py { color: #d0d0d0 } /* Name.Property */
-.nt { color: #93D4F7;  } /* Name.Tag */
-.nv { color: #40ffff } /* Name.Variable */
-.ow { color: #6ab825; } /* Operator.Word */
-.w { color: #666666 } /* Text.Whitespace */
-.mf { color: #3677a9 } /* Literal.Number.Float */
-.mh { color: #3677a9 } /* Literal.Number.Hex */
-.mi { color: #3677a9 } /* Literal.Number.Integer */
-.mo { color: #3677a9 } /* Literal.Number.Oct */
-.sb { color: #ed9d13 } /* Literal.String.Backtick */
-.sc { color: #ed9d13 } /* Literal.String.Char */
-.sd { color: #ed9d13 } /* Literal.String.Doc */
-.s2 { color: #ed9d13 } /* Literal.String.Double */
-.se { color: #ed9d13 } /* Literal.String.Escape */
-.sh { color: #ed9d13 } /* Literal.String.Heredoc */
-.si { color: #ed9d13 } /* Literal.String.Interpol */
-.sx { color: #ffa500 } /* Literal.String.Other */
-.sr { color: #ed9d13 } /* Literal.String.Regex */
-.s1 { color: #65B042 } /* Literal.String.Single */
-.ss { color: #ed9d13 } /* Literal.String.Symbol */
-.bp { color: #24909d } /* Name.Builtin.Pseudo */
-.vc { color: #40ffff } /* Name.Variable.Class */
-.vg { color: #40ffff } /* Name.Variable.Global */
-.vi { color: #40ffff } /* Name.Variable.Instance */
-.il { color: #3677a9 } /* Literal.Number.Integer.Long */
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE; } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+@media print {
+    pre .str, code .str { color: #060; }
+    pre .kwd, code .kwd { color: #006; font-weight: bold; }
+    pre .com, code .com { color: #600; font-style: italic; }
+    pre .typ, code .typ { color: #404; font-weight: bold; }
+    pre .lit, code .lit { color: #044; }
+    pre .pun, code .pun { color: #440; }
+    pre .pln, code .pln { color: #000; }
+    pre .tag, code .tag { color: #006; font-weight: bold; }
+    pre .atn, code .atn { color: #404; }
+    pre .atv, code .atv { color: #060; }
+}
+/* End Syntax Hignlighting styles */
+
+
+/*
+
+Style with support for rainbow parens
+
+*/
+
+pre {
+    ::-moz-selection {
+        background: #FFF7A8;
+        color: #444;
+        text-shadow: none;
+    }
+    ::selection {
+        background: #FFF7A8;
+        color: #444;
+        text-shadow: none;
+    }
+}
+
+pre {
+    margin: 15px 0;
+    code {
+        display: block;
+        padding: 1.5em;
+        background: #444;
+        color: #D1D9E1;
+        white-space: pre-wrap;
+        border-radius: 0;
+        font-size: 100%;
+        font-family: consolas, monospace;
+    }
+}
+
+
+pre .body,
+pre .collection {
+    color: #D1D9E1;
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .doctype,
+pre .lisp .string,
+pre .javadoc {
+    color: #AEAEAE;
+}
+
+pre .keyword,
+pre .clojure .attribute,
+pre .winutils,
+pre .javascript .title,
+pre .addition,
+pre .css .tag {
+    color: #C9C;
+}
+
+pre .number { color: #f99157; }
+
+pre .command,
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula,
+pre .regexp,
+pre .hexcolor {
+    color: #8abeb7;
+}
+
+pre .title,
+pre .localvars,
+pre .function .title,
+pre .chunk,
+pre .decorator,
+pre .built_in,
+pre .lisp .title,
+pre .identifier
+{
+    color: #b5bd68;
+}
+
+
+pre .class .keyword
+{
+    color: #f2777a;
+}
+
+pre .variable,
+pre .lisp .body,
+pre .smalltalk .number,
+pre .constant,
+pre .class .title,
+pre .parent,
+pre .haskell .label,
+pre .id,
+pre .lisp .title,
+pre .clojure .title .built_in {
+    color: #ffcc66;
+}
+
+pre .attribute,
+pre .clojure .title {
+    color: #81a2be;
+}
+
+pre .preprocessor,
+pre .pragma,
+pre .pi,
+pre .shebang,
+pre .symbol,
+pre .symbol .string,
+pre .diff .change,
+pre .special,
+pre .attr_selector,
+pre .important,
+pre .subst,
+pre .cdata {
+    color: #f99157;
+}
+
+pre .deletion {
+    color: #dc322f;
+}
+
+pre .tex .formula {
+    background: #eee8d5;
+}

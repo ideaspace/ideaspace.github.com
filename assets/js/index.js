@@ -1,9 +1,7 @@
-define("index", function(require, exports, module){
+define("index",["highlight"],function (require, exports, module) {
 
-    var $ = require("jquery");
+    var hljs = require("highlight");
 
-
-    require.async("prettyprint", function(){
-        prettyPrint();
-    });
-})
+    hljs.tabReplace = '<span class="indent">\t</span>';
+    hljs.initHighlightingOnLoad();
+});
